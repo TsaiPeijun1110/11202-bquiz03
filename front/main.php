@@ -59,6 +59,7 @@
         text-align: center;
         flex-shrink: 0;
         width: 90px;
+        position: relative;
     }
 
     .controls {
@@ -88,6 +89,7 @@
             ?>
         </div>
 
+
         <div class="controls">
             <div class="left"></div>
             <div class="btns">
@@ -108,6 +110,26 @@
 </div>
 <script>
     $(".item").eq(0).show();
+    let total=$(".btn").length
+    let p=0;
+
+    $(".left,.right").on("click",function(){
+        let arrow=$(this).attr('class')
+        
+        switch(arrow){
+            case "right":
+                if(p+1<=(total-4)){
+               p=p+1;
+            }
+            break;   
+            case "left":
+                if(p-1>=0){
+                p=p-1;
+            }
+            break;   
+        }
+        $(".btn").animate({right:90*p})
+    })
 </script>
 
 
