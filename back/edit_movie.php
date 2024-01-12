@@ -34,11 +34,11 @@
                     <td class="ct">上映日期</td>
                     <td>
                         <?php
-                           [$year,$month,$date]=$ondate=explode("-",$movie['ondate']);
+                           [$year,$month,$date]=explode("-",$movie['ondate']);
                         ?>
                         <select name="year" id="">
-                            <option value="2024"><?=($year==2024)?'selected':'';?>>2024</option>
-                            <option value="2024"><?=($year==2025)?'selected':'';?>>2025</option>
+                            <option value="2024"<?=($year==2024)?'selected':'';?>>2024</option>
+                            <option value="2024"<?=($year==2025)?'selected':'';?>>2025</option>
                         </select>年
                         <select name="month" id="">
                             <?php
