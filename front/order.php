@@ -26,6 +26,11 @@
     $("#movie").on("change",function(){
         getDates($("#movie").val())
     })
+
+    $("#date").on("change",function(){
+        getSessions($("#movie").val(),$("#date").val())
+    })
+
     function getMovies(){
         $.get("./api/get_movies.php",(movies)=>{
             $("#movie").html(movies);
